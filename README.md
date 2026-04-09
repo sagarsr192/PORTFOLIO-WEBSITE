@@ -2,7 +2,7 @@
 
 Portfolio Owner: **SAGAR S R**
 
-A recruiter-ready full-stack portfolio website built for **Future Interns – Full Stack Web Development Task 1**.
+A recruiter-ready full-stack portfolio website built for **Future Interns - Full Stack Web Development Task 1**.
 
 ## Live Demo
 
@@ -12,9 +12,7 @@ Add your deployed website URL here:
 
 ## GitHub Repository
 
-Add your public repo URL here:
-
-- Repository: `https://github.com/sagarsr192/professional-portfolio`
+- Repository: `https://github.com/sagarsr192/PORTFOLIO-WEBSITE`
 
 ## Features
 
@@ -25,6 +23,7 @@ Add your public repo URL here:
 - Email notifications via SMTP (Nodemailer)
 - Responsive design for desktop, tablet, and mobile
 - SEO-friendly metadata (title, description, OpenGraph, Twitter card, JSON-LD)
+- Streamlit entrypoint for Streamlit Cloud deployment (`app.py`)
 
 ## Tech Stack
 
@@ -40,29 +39,18 @@ Add your public repo URL here:
 - Express.js
 - Nodemailer
 
-## Project Structure
+### Streamlit Deployment
 
-```bash
-.
-├── client/                  # React frontend
-│   ├── src/
-│   ├── index.html
-│   └── package.json
-├── server/                  # Express backend
-│   ├── src/index.js
-│   └── package.json
-├── .env.example
-├── package.json             # Root workspace scripts
-└── README.md
-```
+- Python
+- Streamlit
 
 ## Setup Instructions
 
 ### 1) Clone the repository
 
 ```bash
-git clone https://github.com/sagarsr192/professional-portfolio.git
-cd professional-portfolio
+git clone https://github.com/sagarsr192/PORTFOLIO-WEBSITE.git
+cd PORTFOLIO-WEBSITE
 ```
 
 ### 2) Install dependencies
@@ -71,85 +59,18 @@ cd professional-portfolio
 npm install
 ```
 
-### 3) Configure environment variables
-
-Copy `.env.example` into `.env` at root:
-
-```bash
-cp .env.example .env
-```
-
-On Windows PowerShell:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-Update values in `.env`:
-
-- `VITE_API_BASE_URL`
-- `PORT`
-- `CLIENT_ORIGIN`
-- `SMTP_HOST`
-- `SMTP_PORT`
-- `SMTP_USER`
-- `SMTP_PASS`
-- `RECEIVER_EMAIL`
-
-> For Gmail SMTP, use an **App Password**, not your account password.
-
-### 4) Run in development mode
+### 3) Run in development mode (React + Node)
 
 ```bash
 npm run dev
 ```
 
-- Frontend: `http://localhost:5173`
-- Backend: `http://localhost:5000`
-
-### 5) Build frontend
+### 4) Run Streamlit app
 
 ```bash
-npm run build
+pip install -r requirements.txt
+streamlit run app.py
 ```
-
-## Deployment Guide
-
-### Recommended setup
-
-- Frontend: Vercel / Netlify
-- Backend: Render / Railway / Cyclic
-
-### Environment variables for deployment
-
-Set all variables from `.env.example` in your hosting dashboards.
-
-For frontend hosting, set:
-
-- `VITE_API_BASE_URL` = your deployed backend URL
-
-For backend hosting, set:
-
-- `CLIENT_ORIGIN` = your deployed frontend URL
-- SMTP and receiver email credentials
-
-## Customization Checklist
-
-Before submission, update:
-
-- Name, role, and bio in `client/src/data.js`
-- GitHub and LinkedIn links
-- Project cards (title, stack, links, summary)
-- Resume file as `client/public/resume.pdf` (used by `resumeUrl: '/resume.pdf'`)
-- SEO URLs in `client/index.html`
-
-## Final Submission Checklist
-
-- [ ] Portfolio deployed and live
-- [ ] Source code pushed to public GitHub repository
-- [ ] README includes setup and deployment steps
-- [ ] Real project content added
-- [ ] Shared on LinkedIn with Future Interns tagged
 
 ## License
 
