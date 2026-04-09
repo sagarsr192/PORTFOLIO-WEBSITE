@@ -74,7 +74,7 @@ export default function App() {
       <main>
         <section id="home" className="hero section">
           <div className="container hero-grid">
-            <div>
+            <div className="hero-copy">
               <p className="eyebrow">Professional Portfolio</p>
               <h1>{profile.name}</h1>
               <h2>{profile.role}</h2>
@@ -85,31 +85,33 @@ export default function App() {
                 </a>
               </div>
             </div>
-            <div className="hero-profile-pic">
-              <img src="/profile.jpg" alt={`Profile picture of ${profile.name}`} />
-            </div>
-            <aside className="hero-card">
-              <h3>Quick Profile</h3>
-              <ul>
-                <li>
-                  <strong>Location:</strong> {profile.location}
-                </li>
-                <li>
-                  <strong>Email:</strong> {profile.email}
-                </li>
-                <li>
-                  <strong>GitHub:</strong>{' '}
-                  <a href={profile.github} target="_blank" rel="noreferrer">
-                    Profile
-                  </a>
-                </li>
-                <li>
-                  <strong>LinkedIn:</strong>{' '}
-                  <a href={profile.linkedin} target="_blank" rel="noreferrer">
-                    Connect
-                  </a>
-                </li>
-              </ul>
+            <aside className="hero-aside" aria-label="Candidate profile summary">
+              <figure className="hero-profile-pic">
+                <img src="/profile.jpg" alt={`Profile picture of ${profile.name}`} />
+              </figure>
+              <section className="hero-card">
+                <h3>Quick Profile</h3>
+                <ul>
+                  <li>
+                    <strong>Location:</strong> {profile.location}
+                  </li>
+                  <li>
+                    <strong>Email:</strong> {profile.email}
+                  </li>
+                  <li>
+                    <strong>GitHub:</strong>{' '}
+                    <a href={profile.github} target="_blank" rel="noreferrer">
+                      Profile
+                    </a>
+                  </li>
+                  <li>
+                    <strong>LinkedIn:</strong>{' '}
+                    <a href={profile.linkedin} target="_blank" rel="noreferrer">
+                      Connect
+                    </a>
+                  </li>
+                </ul>
+              </section>
             </aside>
           </div>
         </section>
